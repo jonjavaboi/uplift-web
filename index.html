@@ -249,132 +249,159 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 1.5rem;
-            font-size: 2rem;
+            font-size: 1.8rem;
         }
 
         .service-card h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             margin-bottom: 1rem;
             color: var(--deep-blue);
         }
 
         .service-card p {
             color: var(--charcoal);
-            opacity: 0.8;
-            line-height: 1.8;
+            opacity: 0.85;
+            line-height: 1.7;
         }
 
-        /* About Section */
-        .about {
+        /* Vision Section */
+        .vision {
             padding: 6rem 2rem;
-            background: linear-gradient(to bottom, var(--cream) 0%, var(--soft-white) 100%);
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .about-text h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2rem, 4vw, 3rem);
-            color: var(--deep-blue);
-            margin-bottom: 1.5rem;
-        }
-
-        .about-text p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--charcoal);
-            margin-bottom: 1.5rem;
-            opacity: 0.9;
-        }
-
-        .about-image {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-        }
-
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 6rem 2rem;
-            background: linear-gradient(135deg, var(--deep-blue) 0%, var(--ice-blue) 100%);
+            background: linear-gradient(135deg, var(--deep-blue) 0%, #1A4D6A 100%);
             color: white;
+            position: relative;
+            overflow: hidden;
         }
 
-        .contact-container {
-            max-width: 1200px;
+        .vision::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(168, 213, 226, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .vision-content {
+            max-width: 900px;
             margin: 0 auto;
             text-align: center;
+            position: relative;
+            z-index: 2;
         }
 
-        .contact h2 {
+        .vision h2 {
             font-family: 'Playfair Display', serif;
             font-size: clamp(2rem, 4vw, 3.5rem);
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
         }
 
-        .contact p {
+        .vision p {
             font-size: 1.2rem;
-            margin-bottom: 3rem;
-            opacity: 0.9;
+            line-height: 1.9;
+            opacity: 0.95;
+            margin-bottom: 1.5rem;
         }
 
-        .contact-info {
+        /* Products Section */
+        .products {
+            padding: 6rem 2rem;
+            background: var(--cream);
+        }
+
+        .product-showcase {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
 
-        .contact-item {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
+        .product-item {
+            background: white;
             border-radius: 15px;
-            backdrop-filter: blur(10px);
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
         }
 
-        .contact-item:hover {
-            background: rgba(255, 255, 255, 0.15);
+        .product-item:hover {
             transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
         }
 
-        .contact-item h3 {
+        .product-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, var(--ice-blue), var(--soft-white));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-info h4 {
+            font-family: 'Playfair Display', serif;
             font-size: 1.3rem;
+            color: var(--deep-blue);
             margin-bottom: 0.5rem;
-            font-weight: 600;
         }
 
-        .contact-item a {
-            color: white;
-            text-decoration: none;
-            opacity: 0.9;
-            transition: opacity 0.3s ease;
+        .product-info p {
+            color: var(--charcoal);
+            opacity: 0.8;
+            font-size: 0.95rem;
         }
 
-        .contact-item a:hover {
-            opacity: 1;
+        /* Community Section */
+        .community {
+            padding: 6rem 2rem;
+            background: var(--soft-white);
+            text-align: center;
+        }
+
+        .community-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .community-value {
+            padding: 2rem;
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .community-value h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--deep-blue);
+            margin-bottom: 0.8rem;
+        }
+
+        .community-value p {
+            color: var(--charcoal);
+            opacity: 0.85;
         }
 
         /* Footer */
         footer {
             background: var(--charcoal);
-            color: var(--soft-white);
-            padding: 3rem 2rem 1rem;
+            color: white;
+            padding: 4rem 2rem 2rem;
             text-align: center;
         }
 
@@ -383,16 +410,22 @@
             margin: 0 auto;
         }
 
+        .footer-logo {
+            width: 150px;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
         .footer-links {
             display: flex;
-            justify-content: center;
             gap: 2rem;
-            margin-bottom: 2rem;
+            justify-content: center;
             flex-wrap: wrap;
+            margin-bottom: 2rem;
         }
 
         .footer-links a {
-            color: var(--soft-white);
+            color: white;
             text-decoration: none;
             opacity: 0.8;
             transition: opacity 0.3s ease;
@@ -403,25 +436,14 @@
         }
 
         .copyright {
+            opacity: 0.6;
+            font-size: 0.9rem;
             margin-top: 2rem;
             padding-top: 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            opacity: 0.6;
-            font-size: 0.9rem;
         }
 
         /* Animations */
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -433,198 +455,668 @@
             }
         }
 
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         /* Responsive */
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(26, 26, 26, 0.85);
+            backdrop-filter: blur(5px);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 25px;
+            max-width: 600px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: slideUp 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-header {
+            padding: 2.5rem 2.5rem 1.5rem;
+            border-bottom: 1px solid rgba(168, 213, 226, 0.3);
+        }
+
+        .modal-header h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--deep-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-header p {
+            color: var(--charcoal);
+            opacity: 0.8;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: transparent;
+            border: none;
+            font-size: 2rem;
+            color: var(--charcoal);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .close-modal:hover {
+            background: rgba(168, 213, 226, 0.2);
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            padding: 2rem 2.5rem 2.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--deep-blue);
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.9rem 1.2rem;
+            border: 2px solid rgba(168, 213, 226, 0.3);
+            border-radius: 12px;
+            font-family: 'Manrope', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--ice-blue);
+            box-shadow: 0 0 0 3px rgba(168, 213, 226, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-group small {
+            display: block;
+            margin-top: 0.4rem;
+            color: var(--charcoal);
+            opacity: 0.7;
+            font-size: 0.85rem;
+        }
+
+        .checkbox-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .checkbox-group label {
+            font-weight: 600;
+            color: var(--deep-blue);
+            font-size: 0.95rem;
+            display: block;
+            margin-bottom: 0.8rem;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.6rem;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 0.7rem;
+            cursor: pointer;
+            accent-color: var(--deep-blue);
+        }
+
+        .checkbox-item label {
+            margin: 0;
+            font-weight: 400;
+            cursor: pointer;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.1rem;
+            background: linear-gradient(135deg, var(--deep-blue), var(--ice-blue));
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Manrope', sans-serif;
+            margin-top: 1rem;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(44, 95, 124, 0.3);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        .success-message.active {
+            display: block;
+        }
+
+        .success-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .success-message h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--deep-blue);
+            margin-bottom: 1rem;
+        }
+
+        .success-message p {
+            color: var(--charcoal);
+            opacity: 0.8;
+            line-height: 1.7;
+        }
+
         @media (max-width: 768px) {
-            .about-content {
-                grid-template-columns: 1fr;
+            .hero {
+                min-height: auto;
+                padding: 4rem 1.5rem;
+            }
+
+            .services, .vision, .products, .community {
+                padding: 4rem 1.5rem;
             }
 
             .cta-container {
                 flex-direction: column;
+                align-items: stretch;
             }
 
             .btn {
                 width: 100%;
-                max-width: 300px;
             }
 
-            .services-grid {
-                grid-template-columns: 1fr;
+            .modal-content {
+                margin: 1rem;
+            }
+
+            .modal-header,
+            .modal-body {
+                padding: 1.5rem;
+            }
+
+            .modal-header h3 {
+                font-size: 1.6rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="logo-container">
-                <h1>Uplift Medical</h1>
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="logo-container">
+            <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Stylized upward chevrons -->
+                <path d="M100 50 L140 75 L135 82 L100 60 L65 82 L60 75 Z" fill="#A8D5E2" stroke="#2C5F7C" stroke-width="3"/>
+                <path d="M100 70 L140 95 L135 102 L100 80 L65 102 L60 95 Z" fill="#A8D5E2" stroke="#2C5F7C" stroke-width="3"/>
+                <path d="M100 90 L140 115 L135 122 L100 100 L65 122 L60 115 Z" fill="#A8D5E2" stroke="#2C5F7C" stroke-width="3"/>
+                <!-- Text -->
+                <text x="100" y="155" font-family="Playfair Display, serif" font-size="28" font-weight="700" fill="#1A1A1A" text-anchor="middle">upLIFT</text>
+            </svg>
+        </div>
+        <h1>Rise to Your Best Self</h1>
+        <p class="tagline">Where Cutting-Edge Medicine Meets Elite Fitness</p>
+        <p class="hero-description">
+            Uplift Medical combines boutique fitness training with advanced wellness medicine—Hormone Replacement Therapy (HRT), GLPs, peptides, and personalized nutrition—to help you become the strongest, healthiest best version of yourself.
+        </p>
+        <div class="cta-container">
+            <button class="btn btn-primary" onclick="openModal()">Join the Waitlist</button>
+            <button class="btn btn-secondary">Learn More</button>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services">
+    <div class="container">
+        <h2 class="section-title">Our Comprehensive Approach</h2>
+        <p class="section-subtitle">Science-backed wellness solutions tailored to your unique goals</p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">💪</div>
+                <h3>Elite Physical Training</h3>
+                <p>Boutique fitness programs designed by expert trainers to build strength, endurance, and confidence in a supportive community environment.</p>
             </div>
-            <p class="tagline">Rise to Your Best Self</p>
-            <p class="hero-description">
-                Experience transformative wellness through personalized aesthetic treatments and holistic care. 
-                Your journey to renewed confidence starts here.
-            </p>
-            <div class="cta-container">
-                <a href="#contact" class="btn btn-primary">Book Consultation</a>
-                <a href="#services" class="btn btn-secondary">Explore Services</a>
+
+            <div class="service-card">
+                <div class="service-icon">🧬</div>
+                <h3>Hormone Optimization</h3>
+                <p>Specialized Hormone Replacement Therapy (HRT) protocols for women—pre and post-menopausal—to restore energy, vitality, and overall well-being through evidence-based medicine.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">💉</div>
+                <h3>Advanced Therapeutics</h3>
+                <p>GLPs and cutting-edge peptide therapies to optimize metabolism, recovery, and longevity under medical supervision.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🥗</div>
+                <h3>Personalized Nutrition</h3>
+                <p>Custom nutritional strategies that fuel your fitness goals and support your medical protocols for optimal results.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3>Accountability & Tracking</h3>
+                <p>Regular check-ins, progress monitoring, and continuous support to keep you on track toward your wellness objectives.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🌟</div>
+                <h3>Community Support</h3>
+                <p>Join a tribe of like-minded individuals committed to growth, wellness, and lifting each other higher.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <p class="section-subtitle">Comprehensive care tailored to your unique needs</p>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">💉</div>
-                    <h3>Injectable Treatments</h3>
-                    <p>Expert administration of Botox, dermal fillers, and neurotoxins to restore youthful contours and smooth fine lines with natural-looking results.</p>
+<!-- Vision Section -->
+<section class="vision">
+    <div class="vision-content">
+        <h2>A Community Rising Together</h2>
+        <p>
+            At Uplift Medical, we believe wellness is not a solo journey. We're building a community of souls dedicated to becoming their best selves—physically, mentally, and emotionally.
+        </p>
+        <p>
+            Our approach combines the precision of modern medicine with the power of human connection. When you elevate yourself, you inspire those around you to rise as well.
+        </p>
+        <p>
+            This is more than a gym. More than a clinic. It's a movement toward holistic wellness, backed by science and fueled by community.
+        </p>
+    </div>
+</section>
+
+<!-- Products Section -->
+<section class="products">
+    <div class="container">
+        <h2 class="section-title">Premium Wellness Products</h2>
+        <p class="section-subtitle">White-labeled peptides and supplements with our signature clean aesthetic</p>
+
+        <div class="product-showcase">
+            <div class="product-item">
+                <div class="product-image">💧</div>
+                <div class="product-info">
+                    <h4>Uplift Peptide Complex</h4>
+                    <p>Pharmaceutical-grade peptides for recovery and performance</p>
                 </div>
+            </div>
 
-                <div class="service-card">
-                    <div class="service-icon">✨</div>
-                    <h3>Skin Rejuvenation</h3>
-                    <p>Advanced laser treatments, chemical peels, and microneedling to revitalize your skin, reduce scarring, and achieve a radiant complexion.</p>
+            <div class="product-item">
+                <div class="product-image">🌿</div>
+                <div class="product-info">
+                    <h4>Vitality Blend</h4>
+                    <p>Essential vitamins and minerals for optimal wellness</p>
                 </div>
+            </div>
 
-                <div class="service-card">
-                    <div class="service-icon">💆</div>
-                    <h3>Body Contouring</h3>
-                    <p>Non-invasive body sculpting treatments including CoolSculpting and radiofrequency therapy to help you achieve your ideal shape.</p>
+            <div class="product-item">
+                <div class="product-image">⚡</div>
+                <div class="product-info">
+                    <h4>Performance Series</h4>
+                    <p>Pre and post-workout formulations for peak results</p>
                 </div>
+            </div>
 
-                <div class="service-card">
-                    <div class="service-icon">🌿</div>
-                    <h3>Wellness Programs</h3>
-                    <p>Holistic wellness solutions including IV therapy, nutritional counseling, and hormone optimization for complete mind-body health.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">💆‍♀️</div>
-                    <h3>Medical Spa</h3>
-                    <p>Luxurious spa treatments combining medical expertise with relaxation, including facials, massage therapy, and skincare consultations.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🎯</div>
-                    <h3>Custom Treatment Plans</h3>
-                    <p>Personalized aesthetic strategies designed specifically for your goals, combining multiple treatments for optimal results.</p>
+            <div class="product-item">
+                <div class="product-image">🌙</div>
+                <div class="product-info">
+                    <h4>Recovery & Rest</h4>
+                    <p>Sleep optimization and muscle recovery support</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="about-content">
-            <div class="about-text">
-                <h2>Your Partner in Wellness</h2>
-                <p>
-                    At Uplift Medical, we believe that true beauty comes from feeling confident in your own skin. 
-                    Our team of board-certified medical professionals combines cutting-edge aesthetic treatments 
-                    with compassionate care to help you achieve your wellness goals.
-                </p>
-                <p>
-                    With years of experience and a commitment to excellence, we provide a safe, welcoming 
-                    environment where your comfort and results are our top priority. Every treatment is 
-                    customized to your unique needs, ensuring natural-looking results that enhance your 
-                    inherent beauty.
-                </p>
-                <a href="#contact" class="btn btn-primary">Schedule Your Visit</a>
+<!-- Community Values -->
+<section class="community">
+    <div class="container">
+        <h2 class="section-title">Our Core Values</h2>
+        <p class="section-subtitle">The principles that guide everything we do</p>
+
+        <div class="community-grid">
+            <div class="community-value">
+                <div class="value-icon">🎯</div>
+                <h4>Excellence</h4>
+                <p>Uncompromising quality in medicine, training, and service</p>
             </div>
-            <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=600&fit=crop" alt="Modern medical spa interior">
+
+            <div class="community-value">
+                <div class="value-icon">🤝</div>
+                <h4>Community</h4>
+                <p>Growing stronger together, lifting as we climb</p>
+            </div>
+
+            <div class="community-value">
+                <div class="value-icon">🔬</div>
+                <h4>Innovation</h4>
+                <p>Pioneering the future of integrative wellness</p>
+            </div>
+
+            <div class="community-value">
+                <div class="value-icon">💙</div>
+                <h4>Empowerment</h4>
+                <p>Helping you become the best version of yourself</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="contact-container">
-            <h2>Get in Touch</h2>
-            <p>Ready to begin your transformation? We're here to help.</p>
-            
-            <div class="contact-info">
-                <div class="contact-item">
-                    <h3>📞 Phone</h3>
-                    <a href="tel:+15551234567">(555) 123-4567</a>
-                </div>
-                
-                <div class="contact-item">
-                    <h3>📧 Email</h3>
-                    <a href="mailto:hello@upliftmedical.com">hello@upliftmedical.com</a>
-                </div>
-                
-                <div class="contact-item">
-                    <h3>📍 Location</h3>
-                    <p>123 Wellness Blvd<br>Suite 200<br>Your City, ST 12345</p>
-                </div>
-                
-                <div class="contact-item">
-                    <h3>🕐 Hours</h3>
-                    <p>Mon-Fri: 9am - 6pm<br>Sat: 10am - 4pm<br>Sun: Closed</p>
-                </div>
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <svg class="footer-logo" width="150" height="150" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M100 50 L140 75 L135 82 L100 60 L65 82 L60 75 Z" fill="#A8D5E2" stroke="#ffffff" stroke-width="2" opacity="0.9"/>
+            <path d="M100 70 L140 95 L135 102 L100 80 L65 102 L60 95 Z" fill="#A8D5E2" stroke="#ffffff" stroke-width="2" opacity="0.9"/>
+            <path d="M100 90 L140 115 L135 122 L100 100 L65 122 L60 115 Z" fill="#A8D5E2" stroke="#ffffff" stroke-width="2" opacity="0.9"/>
+            <text x="100" y="155" font-family="Playfair Display, serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle" opacity="0.9">upLIFT</text>
+        </svg>
+
+        <div class="footer-links">
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#products">Products</a>
+            <a href="#contact">Contact</a>
+            <a href="#privacy">Privacy Policy</a>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2026 Uplift Medical, LLC. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem;">Elevating wellness through science and community</p>
+        </div>
+    </div>
+</footer>
+<!-- Waitlist Modal -->
+<div id="waitlistModal" class="modal">
+    <div class="modal-content">
+        <button class="close-modal" onclick="closeModal()">&times;</button>
+
+        <div id="formSection">
+            <div class="modal-header">
+                <h3>Join the Uplift Community</h3>
+                <p>Be among the first to experience the future of integrative wellness</p>
+            </div>
+
+            <div class="modal-body">
+                <form id="waitlistForm" onsubmit="handleSubmit(event)">
+                    <!-- Personal Information -->
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                        <small>We'll use this to reach out with exclusive updates</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age">Age Range *</label>
+                        <select id="age" name="age" required>
+                            <option value="">Select your age range</option>
+                            <option value="18-29">18-29</option>
+                            <option value="30-39">30-39</option>
+                            <option value="40-49">40-49</option>
+                            <option value="50-59">50-59</option>
+                            <option value="60+">60+</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">City/State *</label>
+                        <input type="text" id="location" name="location" placeholder="e.g., Los Angeles, CA" required>
+                    </div>
+
+                    <!-- Interests -->
+                    <div class="checkbox-group">
+                        <label>What services interest you most? (Select all that apply) *</label>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="fitness" name="interests" value="fitness" required>
+                            <label for="fitness">Elite Physical Training</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="hrt" name="interests" value="hrt">
+                            <label for="hrt">Hormone Replacement Therapy (HRT)</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="glps" name="interests" value="glps">
+                            <label for="glps">GLP Therapies</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="peptides" name="interests" value="peptides">
+                            <label for="peptides">Peptide Therapies</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="nutrition" name="interests" value="nutrition">
+                            <label for="nutrition">Personalized Nutrition</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="products" name="interests" value="products">
+                            <label for="products">Premium Supplements & Products</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="goals">What are your primary wellness goals? *</label>
+                        <textarea id="goals" name="goals" placeholder="Tell us what you're hoping to achieve..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="experience">Current Fitness/Wellness Experience *</label>
+                        <select id="experience" name="experience" required>
+                            <option value="">Select your experience level</option>
+                            <option value="beginner">Beginner - Just starting my journey</option>
+                            <option value="intermediate">Intermediate - Regular exercise/wellness routine</option>
+                            <option value="advanced">Advanced - Experienced athlete/wellness enthusiast</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="referral">How did you hear about us?</label>
+                        <select id="referral" name="referral">
+                            <option value="">Select one</option>
+                            <option value="social">Social Media</option>
+                            <option value="friend">Friend or Family</option>
+                            <option value="search">Search Engine</option>
+                            <option value="advertisement">Advertisement</option>
+                            <option value="event">Event or Conference</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comments">Additional Comments or Questions</label>
+                        <textarea id="comments" name="comments" placeholder="Anything else you'd like us to know?"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Join the Waitlist</button>
+                </form>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="#services">Services</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2026 Uplift Medical. All rights reserved. Rise to Your Best Self.</p>
-            </div>
+        <div id="successSection" class="success-message">
+            <div class="success-icon">✨</div>
+            <h3>Welcome to Uplift!</h3>
+            <p>Thank you for joining our community. We're excited to have you on this journey toward becoming your best self.</p>
+            <p style="margin-top: 1rem;">You'll receive an email confirmation shortly with next steps and exclusive early access information.</p>
+            <button class="btn btn-primary" onclick="closeModal()" style="margin-top: 2rem; width: auto; padding: 1rem 2.5rem;">Close</button>
         </div>
-    </footer>
+    </div>
+</div>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+<script>
+    function openModal() {
+        document.getElementById('waitlistModal').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        document.getElementById('waitlistModal').classList.remove('active');
+        document.body.style.overflow = 'auto';
+
+        // Reset form if success message was shown
+        if (document.getElementById('successSection').classList.contains('active')) {
+            document.getElementById('successSection').classList.remove('active');
+            document.getElementById('formSection').style.display = 'block';
+            document.getElementById('waitlistForm').reset();
+        }
+    }
+
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+        const modal = document.getElementById('waitlistModal');
+        if (event.target === modal) {
+            closeModal();
+        }
+    }
+
+    async function handleSubmit(event) {
+        event.preventDefault();
+
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxlZRq82r-08lctnWUPtJDlcbccz30Cllc4MvfyPtuooU1xgWlX7rzmTC6Cgj34is6NdQ/exec';
+
+        const formData = new FormData(event.target);
+        const data = {};
+
+        for (let [key, value] of formData.entries()) {
+            if (key === 'interests') {
+                if (!data.interests) data.interests = [];
+                data.interests.push(value);
+            } else {
+                data[key] = value;
+            }
+        }
+
+        // Convert interests array to comma-separated string for the sheet
+        if (data.interests) {
+            data.interests = data.interests.join(', ');
+        }
+
+        // Add timestamp
+        data.timestamp = new Date().toISOString();
+
+        try {
+            await fetch(SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
             });
+
+            // Show success (no-cors means we can't read response, but data posts)
+            document.getElementById('formSection').style.display = 'none';
+            document.getElementById('successSection').classList.add('active');
+        } catch (error) {
+            console.error('Submission failed:', error);
+            alert('Submission failed. Please try again.');
+        }
+    }
+
+    // Make at least one checkbox required
+    const checkboxes = document.querySelectorAll('input[name="interests"]');
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            const checkedOne = Array.from(checkboxes).some(cb => cb.checked);
+            checkboxes.forEach(cb => cb.required = !checkedOne);
         });
-
-        // Add scroll animation trigger
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.service-card, .about-text, .about-image').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'all 0.6s ease-out';
-            observer.observe(el);
-        });
-    </script>
+    });
+</script>
 </body>
 </html>
